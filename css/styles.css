@@ -315,6 +315,15 @@ p {
   right: 8px;
 }
 
+.close-x:hover .close-icoon,
+.close-x:focus .close-icoon {
+  fill: var(--blue-color);
+}
+
+/* .close-icoon:hover {
+  fill: var(--blue-color);
+} */
+
 .is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -422,9 +431,52 @@ p {
 }
 
 .check-input:checked + .checkbox-svg svg path {
-  stroke-dasharray: ;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke: var(--white--color);
+  stroke-width: 3;
+  animation: check 4s forwards;
 }
 
+.checkbox-svg::before {
+  content: '';
+  background-color: red;
+  position: absolute;
+  top: 0px;
+  transform: scale(0);
+  display: block;
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+}
+
+.check-input:checked + .checkbox-svg::before {
+  animation: ripple 0.3s;
+}
+
+@keyframes check {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.btn-enviar {
+  padding: 10px 75px;
+  background-color: var(--blue-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--white--color);
+  border: none;
+  letter-spacing: 0.06em;
+  margin-left: 124px;
+  margin-top: 10px;
+  cursor: pointer;
+}
 /* ESTILOS PARRAFOS*/
 
 .boxes-icons-1 {
