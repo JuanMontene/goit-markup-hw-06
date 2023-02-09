@@ -404,7 +404,13 @@ p {
 }
 
 .check-input {
-  display: none;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 .container-text p {
@@ -413,16 +419,21 @@ p {
 }
 
 .checkbox-svg {
-  width: 16px;
+  position: relative;
+  width: 20px;
   height: 15px;
-  border: 1px solid var(--color--212121--);
+  border: 2px solid var(--color--212121--);
+  border-radius: 10%;
   margin-left: 12px;
   cursor: pointer;
 }
 
 .checkbox-svg svg {
-  width: 13px;
-  height: 12px;
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  width: 12px;
+  height: 9px;
 }
 
 .check-input:checked + .checkbox-svg {
@@ -440,7 +451,6 @@ p {
 
 .checkbox-svg::before {
   content: '';
-  background-color: red;
   position: absolute;
   top: 0px;
   transform: scale(0);
@@ -473,7 +483,9 @@ p {
   color: var(--white--color);
   border: none;
   letter-spacing: 0.06em;
-  margin-left: 124px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10px;
   cursor: pointer;
 }
@@ -1025,6 +1037,7 @@ p {
   border-radius: 4px;
   background-color: var(--background-color-index);
   margin-top: 20px;
+  color: var(--white--color);
 }
 
 .btn-subcribe-relative {
