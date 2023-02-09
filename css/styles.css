@@ -35,6 +35,7 @@ body {
   --background-color-cards: rgba(33, 150, 243, 0.9);
   --ventana--modeal: rgba(0, 0, 0, 0.2);
   --background-div-text-images: rgba(47, 48, 58, 0.8);
+  --border-form-modal: rgba(33, 33, 33, 0.2);
 }
 
 .list {
@@ -258,17 +259,41 @@ p {
 }
 
 .modal {
+  padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 528px;
   height: 581px;
+
   background-color: var(--white--color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-tittle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--color--212121--);
+  margin-bottom: 12px;
+}
+
+.tittle-label {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--color--gray--757575);
 }
 
 .close-x {
@@ -295,6 +320,111 @@ p {
   opacity: 0;
   pointer-events: none;
 }
+
+.modal-from-input-group {
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.modal-form-input {
+  display: block;
+  outline: none;
+  border: 1px solid var(--border-form-modal);
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+  padding-left: 42px;
+}
+
+.modal-form-input:focus,
+.modal-form-input:hover {
+  border: 1px solid var(--blue-color);
+}
+
+.modal-form-svg {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  fill: var(--color--212121--);
+  pointer-events: none;
+}
+
+.modal-form-input:hover + .modal-form-svg,
+.modal-form-input:focus + .modal-form-svg {
+  fill: var(--blue-color);
+}
+
+.label-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-area-modal {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-top: 4px;
+  resize: none;
+  outline: none;
+  height: 120px;
+}
+
+::placeholder {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.container-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--color--gray--757575);
+  display: flex;
+  align-items: center;
+}
+
+.check-input {
+  display: none;
+}
+
+.container-text p {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.checkbox-svg {
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--color--212121--);
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.checkbox-svg svg {
+  width: 13px;
+  height: 12px;
+}
+
+.check-input:checked + .checkbox-svg {
+  background-color: var(--blue-color);
+  border-color: var(--blue-color);
+}
+
+.check-input:checked + .checkbox-svg svg path {
+  stroke-dasharray: ;
+}
+
 /* ESTILOS PARRAFOS*/
 
 .boxes-icons-1 {
@@ -815,4 +945,63 @@ p {
 
 .icon-ellipse2 {
   fill: var(--white--color);
+}
+
+.formulario {
+  padding-top: 12px;
+  margin-left: 20px;
+}
+
+.tittle-formularios {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white--color);
+}
+
+.input-subcribe {
+  width: 358px;
+  height: 50px;
+  padding: 0px;
+  padding-left: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--background-color-index);
+  margin-top: 20px;
+}
+
+.btn-subcribe-relative {
+  display: flex;
+}
+
+.suscribe-btn {
+  background-color: var(--blue-color);
+  border: none;
+  /* width: 200px; */
+  height: 50px;
+  margin-left: 12px;
+  padding: 10px 72px 10px 39px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--white--color);
+  letter-spacing: 0.06em;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.enviar-icon {
+  margin-left: 20px;
+  position: absolute;
+  top: 13px;
 }

@@ -476,6 +476,28 @@
                 </li>
               </ul>
             </div>
+            <div class="formulario">
+              <h3 class="tittle-formularios">
+                SUSCRÍBASE al boletín informativo
+              </h3>
+              <form name="mail_suscribe">
+                <label for="user_mail"></label>
+                <input
+                  class="input-subcribe"
+                  type="email"
+                  name="email"
+                  id="mail_suscribe"
+                  placeholder="Correo electrónico"
+                />
+
+                <button type="submit" class="suscribe-btn">
+                  Suscríbase
+                  <svg width="24px" height="24px" class="enviar-icon">
+                    <use href="./images/icons.svg#icon-enviar"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </footer>
@@ -493,6 +515,95 @@
               ></use>
             </svg>
           </button>
+          <h3 class="modal-tittle">
+            Deje sus datos, nos contactaremos con usted
+          </h3>
+          <!-- Formulario nombre -->
+          <form>
+            <label for="input-name" class="tittle-label"> Nombre </label>
+            <div class="modal-from-input-group">
+              <input
+                class="modal-form-input"
+                type="text"
+                name="name"
+                id="input-name"
+              />
+              <svg class="modal-form-svg">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </form>
+          <!-- Formulario Telefono -->
+          <form>
+            <label for="input-phone" class="tittle-label"> Teléfono </label>
+            <div class="modal-from-input-group">
+              <input
+                class="modal-form-input"
+                type="phone"
+                name="telefono"
+                id="input-phone"
+              />
+              <svg class="modal-form-svg">
+                <use href="./images/icons.svg#icon-phoner"></use>
+              </svg>
+            </div>
+          </form>
+          <!-- Formulario Email -->
+          <form>
+            <label for="input-mail" class="tittle-label"> Nombre </label>
+            <div class="modal-from-input-group">
+              <input
+                class="modal-form-input"
+                type="mail"
+                name="correo"
+                id="input-mail"
+              />
+              <svg class="modal-form-svg">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+            </div>
+          </form>
+          <!-- Formulario Text-area -->
+          <form>
+            <label for="mensaje" class="tittle-label label-text">
+              Comentarios
+              <textarea
+                class="text-area-modal"
+                name="comentarios"
+                id="mensaje"
+                placeholder="Introduzca el texto"
+              ></textarea>
+            </label>
+          </form>
+          <!-- Check-box-SVG -->
+          <div class="container-text">
+            <input type="checkbox" id="terminos" class="check-input" />
+            <label for="terminos" class="checkbox-svg">
+              <svg viewBox="0 0 22 16" fill="none" class="svg-checboxx">
+                <path d="M1 6.85L8.09677 14L21 1" />
+              </svg>
+            </label>
+            <p>
+              Estoy de acuerdo con el boletín informativo y acepto los Términos
+              y Condiciones
+            </p>
+          </div>
+          <button type="submit">Enviar</button>
+          <!-- <form>
+            <label for="terminos_y_condiciones">
+              <input
+                type="checkbox"
+                name="terminos y condiciones"
+                value="music"
+                class="check-input"
+                id="terminos_y_condiciones"
+              />
+              <p class="p_terminos">
+                Estoy de acuerdo con el boletín informativo y acepto los
+                Términos y Condiciones
+              </p>
+            </label>
+          </form> -->
         </div>
       </div>
     </section>
