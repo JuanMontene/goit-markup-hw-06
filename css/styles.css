@@ -287,6 +287,7 @@ p {
 }
 
 .tittle-label {
+  margin-top: 10px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -413,9 +414,17 @@ p {
   overflow: hidden;
 }
 
-.container-text p {
+.container-text span {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
   margin-left: 10px;
   margin-top: 20px;
+  letter-spacing: 0.03em;
+
+  color: var(--color--gray--757575t);
 }
 
 .checkbox-svg {

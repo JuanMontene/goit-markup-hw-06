@@ -516,11 +516,11 @@
               ></use>
             </svg>
           </button>
-          <p class="modal-tittle">
-            Deje sus datos, nos contactaremos con usted
-          </p>
-
           <form>
+            <p class="modal-tittle">
+              Deje sus datos, nos contactaremos con usted
+            </p>
+
             <!-- Formulario nombre -->
             <label for="input-name" class="tittle-label"> Nombre </label>
             <div class="modal-from-input-group">
@@ -571,21 +571,22 @@
                 placeholder="Introduzca el texto"
               ></textarea>
             </label>
+
+            <!-- Check-box-SVG -->
+            <div class="container-text">
+              <input type="checkbox" id="terminos" class="check-input" />
+              <label for="terminos" class="checkbox-svg">
+                <svg>
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </label>
+              <span>
+                Estoy de acuerdo con el boletín informativo y acepto los
+                Términos y Condiciones
+              </span>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar</button>
           </form>
-          <!-- Check-box-SVG -->
-          <div class="container-text">
-            <input type="checkbox" id="terminos" class="check-input" />
-            <label for="terminos" class="checkbox-svg">
-              <svg>
-                <use href="./images/icons.svg#icon-check"></use>
-              </svg>
-            </label>
-            <p>
-              Estoy de acuerdo con el boletín informativo y acepto los Términos
-              y Condiciones
-            </p>
-          </div>
-          <button type="submit" class="btn-enviar">Enviar</button>
         </div>
       </div>
     </section>
